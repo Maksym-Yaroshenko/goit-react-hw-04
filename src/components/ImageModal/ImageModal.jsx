@@ -8,7 +8,6 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
     transform: "translate(-50%, -50%)",
   },
   overlay: {
@@ -16,23 +15,17 @@ const customStyles = {
   },
 };
 
-function ImageModal({ closeModal, modalIsOpen, photo }) {
+export default function ImageModal({ closeModal, modalIsOpen, articles }) {
   return (
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       style={customStyles}
-      contentLabel="Example Modal"
+      contentLabel="Modal"
       closeTimeoutMS={400}
       className={css.modal}
     >
-      <img src={photo.urls.regular} alt={photo.alt_description} />
-      <div className={css.modalInfo}>
-        <p className={css.modalText}>{photo.alt_description}</p>
-        <p className={css.modalText}>Author: {photo.user.name}</p>
-      </div>
+      <img src={articles.regular} alt={articles.alt_description} />
     </Modal>
   );
 }
-
-export default ImageModal;

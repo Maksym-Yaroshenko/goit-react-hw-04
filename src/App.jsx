@@ -80,7 +80,7 @@ function App() {
         <ImageModal
           closeModal={closeModal}
           modalIsOpen={modalIsOpen}
-          photo={modalImage}
+          articles={modalImage}
         />
       )}
     </>

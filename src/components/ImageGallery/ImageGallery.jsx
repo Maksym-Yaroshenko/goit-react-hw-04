@@ -2,7 +2,6 @@ import ImageCard from "./ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
 export default function ImageGallery({ articles, openModal, afterOpenModal }) {
-  //   console.log(articles);
   return (
     <>
       <ul className={css.container}>
